@@ -11,7 +11,7 @@ Released under the terms of the GNU General Public License Version 2.
 
 == Changelog ==  
 
-= 0.1.0 01-Feb-2012 =  
+= 0.1.0 31-Jan-2012 =  
 * initial version
 
 == Description ==
