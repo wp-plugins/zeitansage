@@ -40,7 +40,8 @@ Most probably nothing at all. The current time is rounded to a 5-minute precisio
 No, really, it's very simple.
 
 = Will other languages be supported? =
-English will definitely be supported in the next version. As for other languages, I doubt that I will be able to do it, but if you'd like to contribute, feel free to contact me.
+Feel free to contribute translations for other languages. However, it might be necessary to adjust the plugin code as well, as time expressions are 
+built in various ways in different languages.
 
 == Screenshots ==
 1. The widget in action (German)
