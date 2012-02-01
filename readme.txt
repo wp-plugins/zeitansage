@@ -4,7 +4,7 @@ Donate link: http://www.gunnar-schmid.de/zeitansage
 Tags: widget, time
 Requires at least: 3.0.0
 Tested up to: 3.3.1
-Stable tag: 0.1.0
+Stable tag: 0.2.0
 
 == License ==  
 Released under the terms of the GNU General Public License Version 2.  
