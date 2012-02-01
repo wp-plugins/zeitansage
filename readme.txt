@@ -11,19 +11,23 @@ Released under the terms of the GNU General Public License Version 2.
 
 == Changelog ==  
 
+= 0.2.0 01-Feb-2012 =  
+* I18N'ed, added support for English locale
+
 = 0.1.0 31-Jan-2012 =  
 * initial version
 
 == Description ==
-"Zeitansage" is a simple text widget which displays the current time as a verbal expression, rounded to 5-minute precision. Currently available in German only.
+"Zeitansage" is a simple text widget which displays the current time as a verbal expression, rounded to 5-minute precision. Supports English and German.
 
 == Installation ==
 1.  Unzip the Zeitansage folder to the "/wp-content/plugins/" directory.
-2.  Activate the plugin through the "Plugins" menu in WordPress.
-3.  Place the widget in a sidebar or other widget-ready part of your site using the "Widget" menu.
+1.  Activate the plugin through the "Plugins" menu in WordPress.
+1.  Place the widget in a sidebar or other widget-ready part of your site using the "Widget" menu.
 
 == Upgrade Notice ==
-None so far, it's the first release.
+= 0.2.0 =
+Added support for English locale.
 
 == Frequently Asked Questions ==
 = What is the purpose of this plugin? =
@@ -39,11 +43,10 @@ No, really, it's very simple.
 English will definitely be supported in the next version. As for other languages, I doubt that I will be able to do it, but if you'd like to contribute, feel free to contact me.
 
 == Screenshots ==
-
-1. The widget in action
+1. The widget in action (German)
+1. The widget in action (English)
 
 == More Info ==
 For more information, please visit the plugin's page  
 [Zeitansage](http://www.gunnar-schmid.de/zeitansage)
 
-For support, please contact me by e-mail: (mailto:mail@gunnar-schmid.de)

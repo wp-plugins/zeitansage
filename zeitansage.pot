@@ -1,0 +1,151 @@
+# Copyright (C) 2012 Zeitansage
+# This file is distributed under the same license as the Zeitansage package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zeitansage 0.2.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/zeitansage\n"
+"POT-Creation-Date: 2012-02-01 11:01:16+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: zeitansage.php:23
+msgid "Ausgabe der Uhrzeit in Textform"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Zeitansage 0.2.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: zeitansage.php:24 zeitansage.php:49
+msgid "Zeitansage"
+msgstr ""
+
+#: zeitansage.php:32
+msgid "Titel:"
+msgstr ""
+
+#: zeitansage.php:82
+msgid "Uhr"
+msgstr ""
+
+#: zeitansage.php:84
+msgid "Es ist %1$s %2$s%3$s."
+msgstr ""
+
+#: zeitansage.php:96
+msgid "zwölf"
+msgstr ""
+
+#: zeitansage.php:98
+msgid "eins"
+msgstr ""
+
+#: zeitansage.php:100
+msgid "zwei"
+msgstr ""
+
+#: zeitansage.php:102
+msgid "drei"
+msgstr ""
+
+#: zeitansage.php:104
+msgid "vier"
+msgstr ""
+
+#: zeitansage.php:106
+msgid "fünf"
+msgstr ""
+
+#: zeitansage.php:108
+msgid "sechs"
+msgstr ""
+
+#: zeitansage.php:110
+msgid "sieben"
+msgstr ""
+
+#: zeitansage.php:112
+msgid "acht"
+msgstr ""
+
+#: zeitansage.php:114
+msgid "neun"
+msgstr ""
+
+#: zeitansage.php:116
+msgid "zehn"
+msgstr ""
+
+#: zeitansage.php:118
+msgid "elf"
+msgstr ""
+
+#: zeitansage.php:121
+msgid "Geisterstunde"
+msgstr ""
+
+#: zeitansage.php:131
+msgid "fünf nach"
+msgstr ""
+
+#: zeitansage.php:133
+msgid "zehn nach"
+msgstr ""
+
+#: zeitansage.php:135
+msgid "viertel nach"
+msgstr ""
+
+#: zeitansage.php:137
+msgid "zwanzig nach"
+msgstr ""
+
+#: zeitansage.php:139
+msgid "fünf vor halb"
+msgstr ""
+
+#: zeitansage.php:141
+msgid "halb"
+msgstr ""
+
+#: zeitansage.php:143
+msgid "fünf nach halb"
+msgstr ""
+
+#: zeitansage.php:145
+msgid "zwanzig vor"
+msgstr ""
+
+#: zeitansage.php:147
+msgid "viertel vor"
+msgstr ""
+
+#: zeitansage.php:149
+msgid "zehn vor"
+msgstr ""
+
+#: zeitansage.php:151
+msgid "fünf vor"
+msgstr ""
+
+#: zeitansage.php:154
+msgid "so ungefähr"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.gunnar-schmid.de/zeitansage"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Ein Widget zur Ausgabe der aktuellen Uhrzeit in Textform"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Gunnar Schmid"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.gunnar-schmid.de"
+msgstr ""

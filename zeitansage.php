@@ -2,11 +2,12 @@
 /**
  * Plugin Name: 	Zeitansage
  * Plugin URI: 		http://www.gunnar-schmid.de/zeitansage
- * Description: 	A widget to display the current time as verbal expression.
+ * Description: 	A widget to display the current time as verbal expression
  * Author: 			Gunnar Schmid
  * Version: 		0.2.0
  * Author URI: 		http://www.gunnar-schmid.de
  * License: 		GPLv2
+ * Text domain:		zeitansage
  */
 
 add_action( 'widgets_init', 'pbr_load_widget' );
@@ -20,8 +21,8 @@ function pbr_load_widget() {
 class PBR_Zeitansage_Widget extends WP_Widget {
 	public function __construct() {
 		
-		$widget_ops = array( 'description' => __( 'Ausgabe der Uhrzeit in Textform' ) );
-		parent::__construct( 'zeitansage', __( 'Zeitansage' ), $widget_ops );
+		$widget_ops = array( 'description' => __( 'Displays the current time as verbal expression' , 'zeitansage') );
+		parent::__construct( 'zeitansage', __( 'Zeitansage' , 'zeitansage'), $widget_ops );
 	}
 
 	public function form( $instance ) {
@@ -29,7 +30,7 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 		$title = $instance['title'];
 		
 		echo '<p>';
-		echo '  <label for="' . $this->get_field_id( 'title' ) . '" >' . __( 'Titel:' ) . '</label>';
+		echo '  <label for="' . $this->get_field_id( 'title' ) . '" >' . __( 'Title:' , 'zeitansage') . '</label>';
 		echo '  <input class="widefat" id="' . $this->get_field_id( 'title' ) . '" name="' . $this->get_field_name( 'title' ) . '" value="' . esc_attr($title) . '" />';
 		echo '</p>';
 	}
@@ -46,7 +47,7 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 		
 		echo $before_widget;
 		
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Zeitansage' ) : $instance['title'], $instance, $this->id_base);
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Zeitansage' , 'zeitansage') : $instance['title'], $instance, $this->id_base);
 		if ( $title ) {
 			echo $before_title . $title . $after_title;
 		}
@@ -79,9 +80,9 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 		// create text out of the numeric values
 		$hour_text = $this->get_hour_text( $hour );
 		$minute_text = $this->get_minute_text( $minute );
-		$oclock_text = empty( $minute_text ) ? ' ' . __( 'Uhr' ) : '';
+		$oclock_text = empty( $minute_text ) ? ' ' . __( 'o\'clock' , 'zeitansage') : '';
 		
-		return sprintf( __( 'Es ist %1$s %2$s%3$s.' ), $minute_text, $hour_text, $oclock_text );
+		return sprintf( __( 'It\'s %1$s %2$s%3$s.' , 'zeitansage'), $minute_text, $hour_text, $oclock_text );
 	}
 	
 	private function get_hour_text( $hour ) {
@@ -90,35 +91,37 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 			$hour-=12;
 		}
 		
+		// TODO: in English use "midnight" for 00:00/12 p. m.
+		
 		switch ( $hour ) {
 			case 0:
 			case 12:
-				return __( 'zwölf' );
+				return __( 'twelve' , 'zeitansage');
 			case 1:
-				return __( 'eins' );
+				return __( 'one' , 'zeitansage');
 			case 2:
-				return __( 'zwei' );
+				return __( 'two' , 'zeitansage');
 			case 3:
-				return __( 'drei' );
+				return __( 'three' , 'zeitansage');
 			case 4:
-				return __( 'vier' );
+				return __( 'four' , 'zeitansage');
 			case 5:
-				return __( 'fünf' );
+				return __( 'five' , 'zeitansage');
 			case 6:
-				return __( 'sechs' );
+				return __( 'six' , 'zeitansage');
 			case 7:
-				return __( 'sieben' );
+				return __( 'seven' , 'zeitansage');
 			case 8:
-				return __( 'acht' );
+				return __( 'eight' , 'zeitansage');
 			case 9:
-				return __( 'neun' );
+				return __( 'nine' , 'zeitansage');
 			case 10:
-				return __( 'zehn' );
+				return __( 'ten' , 'zeitansage');
 			case 11:
-				return __( 'elf' );
+				return __( 'eleven' , 'zeitansage');
 			default:
 				// should never be the case
-				return __( 'Geisterstunde' );
+				return __( 'witching hour' , 'zeitansage');
 		}
 	}
 	
@@ -128,30 +131,30 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 			case 60:
 				return ''; // note: no I18N for the empty string
 			case 5:
-				return __( 'fünf nach');
+				return __( 'five past', 'zeitansage');
 			case 10:
-				return __( 'zehn nach' );
+				return __( 'ten past' , 'zeitansage');
 			case 15:
-				return __( 'viertel nach' );
+				return __( 'quarter past' , 'zeitansage');
 			case 20:
-				return __( 'zwanzig nach' );
+				return __( 'twenty past' , 'zeitansage');
 			case 25:
-				return __( 'fünf vor halb' );
+				return __( 'twenty-five past' , 'zeitansage');
 			case 30:
-				return __( 'halb' );
+				return __( 'half past' , 'zeitansage');
 			case 35:
-				return __( 'fünf nach halb' );
+				return __( 'twenty-five to' , 'zeitansage');
 			case 40:
-				return __( 'zwanzig vor' );
+				return __( 'twenty to' , 'zeitansage');
 			case 45:
-				return __( 'viertel vor' );
+				return __( 'quarter to' , 'zeitansage');
 			case 50:
-				return __( 'zehn vor' );
+				return __( 'ten to' , 'zeitansage');
 			case 55:
-				return __( 'fünf vor' );
+				return __( 'five to' , 'zeitansage');
 			default:
 				// should never be the case
-				return __( 'so ungefähr' );
+				return __( 'about' , 'zeitansage');
 		}
 	}
 }
