@@ -2,14 +2,16 @@
 /**
  * Plugin Name: 	Zeitansage
  * Plugin URI: 		http://www.gunnar-schmid.de/zeitansage
- * Description: 	A widget to display the current time as verbal expression. Currently available in German only.
+ * Description: 	A widget to display the current time as verbal expression.
  * Author: 			Gunnar Schmid
- * Version: 		0.1.0
+ * Version: 		0.2.0
  * Author URI: 		http://www.gunnar-schmid.de
  * License: 		GPLv2
  */
 
 add_action( 'widgets_init', 'pbr_load_widget' );
+$plugin_dir = basename( dirname( __FILE__) );
+load_plugin_textdomain( 'zeitansage', null, $plugin_dir );
 
 function pbr_load_widget() {
 	register_widget( 'PBR_Zeitansage_Widget' );
@@ -30,29 +32,12 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 		echo '  <label for="' . $this->get_field_id( 'title' ) . '" >' . __( 'Titel:' ) . '</label>';
 		echo '  <input class="widefat" id="' . $this->get_field_id( 'title' ) . '" name="' . $this->get_field_name( 'title' ) . '" value="' . esc_attr($title) . '" />';
 		echo '</p>';
-		
-/*	language selection to come
-		echo '<p>';
-		echo '  <label for="' . $this->get_field_id( 'language' ) . '" >' . __( 'Language:' ) . '</label>';
-		echo '  <select class="widefat" id="' . $this->get_field_id( 'language' ) . '" name="' . $this->get_field_name( 'language' ) . '">';
-		echo '  	<option ' . selected( $instance['language'], 'EN' ) . ' value="EN" >' . __( 'English' ) . '</option>';
-		echo '  	<option ' . selected( $instance['language'], 'DE' ) . ' value="DE" >' . __( 'German' ) . '</option>';
-		echo '  </select>';
-		echo '</p>';
-*/		
 	}
 
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		$new_instance = wp_parse_args( (array) $new_instance, array( 'title' => '') );
 		$instance['title'] = strip_tags( $new_instance['title'] );
-/*		
-		if ( in_array( $new_instance['language'], array( 'EN', 'DE' ) ) ) {
-			$instance['language'] = $new_instance['language'];
-		} else {
-			$instance['language'] = 'EN';
-		}
-*/
 		return $instance;
 	}
 
@@ -79,8 +64,15 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 		// round to 5-minute "precision"
 		$minute = round( $minute / 5 ) * 5;
 		
-		// round up to next hour - CAUTION WHEN TRANSLATING: this works probably differently in other languages
-		if ( $minute >= 25 ) {
+		// round up to next hour
+		
+		// TEMP: this should go into translations somehow
+		$roundup_to_next_hour = 35;
+		if ( substr( get_locale(), 0, 2 ) == 'de' ) {
+			$roundup_to_next_hour = 25;
+		}
+		
+		if ( $minute >= $roundup_to_next_hour ) {
 			$hour++;
 		}
 		
@@ -90,7 +82,6 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 		$oclock_text = empty( $minute_text ) ? ' ' . __( 'Uhr' ) : '';
 		
 		return sprintf( __( 'Es ist %1$s %2$s%3$s.' ), $minute_text, $hour_text, $oclock_text );
-		//return 'Es ist jetzt ' . $minute_text . ' ' . $hour_text . $oclock_text . '.';
 	}
 	
 	private function get_hour_text( $hour ) {
@@ -135,7 +126,7 @@ class PBR_Zeitansage_Widget extends WP_Widget {
 		switch ( $minute ) {
 			case 0:
 			case 60:
-				return __( '' );
+				return ''; // note: no I18N for the empty string
 			case 5:
 				return __( 'fünf nach');
 			case 10:
