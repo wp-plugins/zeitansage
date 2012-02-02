@@ -3,7 +3,7 @@
  * Plugin Name: 	Zeitansage
  * Plugin URI: 		http://www.gunnar-schmid.de/zeitansage
  * Description: 	A widget to display the current time as verbal expression
- * Author: 			Gunnar Schmid
+ * Author: 			Gunnar Schmid, plan.build.run
  * Version: 		0.2.0
  * Author URI: 		http://www.gunnar-schmid.de
  * License: 		GPLv2

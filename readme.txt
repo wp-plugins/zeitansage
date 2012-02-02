@@ -1,6 +1,6 @@
 === Zeitansage ===
 Contributors: gschmid
-Donate link: http://www.gunnar-schmid.de/zeitansage
+Donate link: http://www.gunnar-schmid.de
 Tags: widget, time
 Requires at least: 3.0.0
 Tested up to: 3.3.1
@@ -48,6 +48,4 @@ built in various ways in different languages.
 1. The widget in action (English)
 
 == More Info ==
-For more information, please visit the plugin's page  
-[Zeitansage](http://www.gunnar-schmid.de/zeitansage)
-
+Follow me on Twitter [@planbuildrun](https://twitter.com/planbuildrun/) to receive update notifications directly.
