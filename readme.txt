@@ -3,13 +3,16 @@ Contributors: gschmid
 Donate link: http://www.gunnar-schmid.de
 Tags: widget, time
 Requires at least: 3.0.0
-Tested up to: 3.3.1
-Stable tag: 0.2.0
+Tested up to: 3.8.0
+Stable tag: 1.0.0
 
 == License ==  
 Released under the terms of the GNU General Public License Version 2.  
 
 == Changelog ==  
+
+= 1.0.0 13-Dec-2013 =  
+* No change, just updated version to 1.0.0 as the plugins seems to work fine.
 
 = 0.2.0 01-Feb-2012 =  
 * I18N'ed, added support for English locale
@@ -26,6 +29,10 @@ Released under the terms of the GNU General Public License Version 2.
 1.  Place the widget in a sidebar or other widget-ready part of your site using the "Widget" menu.
 
 == Upgrade Notice ==
+
+= 1.0.0 =
+No change, see changelog.
+
 = 0.2.0 =
 Added support for English locale.
 
