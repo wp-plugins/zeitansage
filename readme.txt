@@ -3,7 +3,7 @@ Contributors: gschmid
 Donate link: http://www.gunnar-schmid.de
 Tags: widget, time
 Requires at least: 3.0.0
-Tested up to: 3.8.0
+Tested up to: 3.9.0
 Stable tag: 1.0.0
 
 == License ==  
