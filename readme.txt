@@ -12,7 +12,7 @@ Released under the terms of the GNU General Public License Version 2.
 == Changelog ==  
 
 = 1.0.0 13-Dec-2013 =  
-* No change, just updated version to 1.0.0 as the plugins seems to work fine.
+* No change, just updated version to 1.0.0 as the plugin seems to work fine.
 
 = 0.2.0 01-Feb-2012 =  
 * I18N'ed, added support for English locale
